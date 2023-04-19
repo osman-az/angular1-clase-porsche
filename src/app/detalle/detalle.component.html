@@ -1,0 +1,12 @@
+<!-- <h2 *ngIf="!(titulo == '' || titulo == null)">El titulo recibido es: {{titulo}}</h2> -->
+
+<!-- otra solucion -->
+<div class="contenedorDetalles" *ngFor="let item of reestreno">
+  <div class="contenedorInternoDetalles" *ngIf="item.title == titulo">
+    <h4>INFORMACION DEL VEHÍCULO</h4>
+    <img [src]="item.url" alt="{{item.title}}">
+    <h2>MODELO: {{ item.title }}</h2>
+    <h4>PRECIO: {{ item.precio }} $</h4>
+    <a routerLink="/">VOLVER A HOME</a>
+  </div>
+</div>
